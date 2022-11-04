@@ -197,7 +197,8 @@ def submit(jid, jktoken, todayid):
         
         {"zjlx": 3, "list": [{"column": "c007", "content": "绿码"},
                              {"column": "c008", "content": "灰码（请在到威海后第1、第2、第4天各完成1次核酸检测）"},
-                             {"column": "c009", "content": "黄码"}, {"column": "c010", "content": "红码"}], 
+                             {"column": "c009", "content": "黄码"}, 
+                             {"column": "c010", "content": "红码"}], 
                               "value": ["c007"]},
         
         {"zjlx": 3, "list": [{"column": "c028", "content": "未出校"},
@@ -223,9 +224,16 @@ def submit(jid, jktoken, todayid):
                               "value": ""},
         
         {"zjlx": 2, "list": [{"column": "c027", "content": ""}], 
-                              "value": ""}], "isEdit": 1, "tbzt": 0, "syxgcs": 2,
-        "tbrq": TIME, "mrtbjzsj": "22:10", "xm": XM, "zzjgmc": XUEYUAN,
-        "bdtbslid": todayid, "bdmc": "学生每日健康填报"}
+                              "value": ""}],
+                              "isEdit": 1,
+                              "tbzt": 0, 
+                              "syxgcs": 2,
+                              "tbrq": TIME, 
+                              "mrtbjzsj": "22:10", 
+                              "xm": XM, 
+                              "zzjgmc": XUEYUAN,
+                              "bdtbslid": todayid, 
+                              "bdmc": "学生每日健康填报"}
 
     postUrl = "http://xy.4009955.com/jktb-api/jktb_01_01/homePage/saveForm"
     responseRes = requests.post(postUrl, json=data, headers=header)
@@ -265,10 +273,6 @@ if __name__ == '__main__':
     parser = ArgumentParser(description='HITwh疫情上报')
     parser.add_argument('username', help='登录用户名')
     parser.add_argument('password', help='登录密码')
-    # parser.add_argument('school', help='学校')
-    # parser.add_argument('province', help='省')
-    # parser.add_argument('city', help='市')
-    # parser.add_argument('district', help='区')
     parser.add_argument('xm', help='姓名')
     parser.add_argument('xueyuan', help='学院')
     parser.add_argument('openid', help='openid')
@@ -276,10 +280,6 @@ if __name__ == '__main__':
 
     USERNAME = args.username
     PASSWORD = args.password
-    # SCHOOL = args.school
-    # PROVINCE = args.province
-    # CITY = args.city
-    # DISTRICT = args.district
     XM = args.xm
     XUEYUAN = args.xueyuan
     OPENID = args.openid
