@@ -166,11 +166,11 @@ def submit(jid, jktoken, todayid):
     data = {"list": [
         {"zjlx": 3, "list": [{"column": "c001", "content": "校内"}, 
                              {"column": "c002", "content": "校外"}],
-                             "value": ["c001"]},
+                             "value": ["c002"]},
         
-        {"zjlx": 5, "list": [{"column": "gSheng", "content": "山东省"},
-                             {"column": "gShi", "content": "威海市"},
-                             {"column": "gQu", "content": "环翠区"}], 
+        {"zjlx": 5, "list": [{"column": "gSheng", "content": "重庆市"},
+                             {"column": "gShi", "content": "重庆市"},
+                             {"column": "gQu", "content": "开州区"}], 
                              "value": ""}, 
         
         {"zjlx": 3, "list": [{"column": "c011", "content": "37.2℃及以下"}, 
@@ -204,7 +204,7 @@ def submit(jid, jktoken, todayid):
         {"zjlx": 3, "list": [{"column": "c028", "content": "未出校"},
                              {"column": "c029", "content": "出校，未离开威海（须填报出行方式和外出地点）"},
                              {"column": "c030", "content": "离威"}], 
-                             "value": ["c028"]},
+                             "value": ["c030"]},
         
         {"zjlx": 2, "list": [{"column": "c031", "content": ""}], 
                              "value": ""},
