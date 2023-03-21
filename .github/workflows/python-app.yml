@@ -4,9 +4,10 @@
 name: Python application
 
 on:
-  schedule:
-    - cron: "20 23 * * *"
-    - cron: "00 02 * * *"
+#  schedule:
+#工软服务器关停，学校不再要求填报，停止自动填报
+#    - cron: "20 23 * * *"
+#    - cron: "00 02 * * *"
   workflow_dispatch:
 
 permissions:
